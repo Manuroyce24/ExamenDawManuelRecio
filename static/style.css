@@ -1,8 +1,19 @@
 /*# sourceMappingURL=style.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 /* Definimos el estilo de la rejilla */
 /* Definimos el estilo de la rejilla */
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
 .grid {
+    font-family: 'Fredoka One', cursive;
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
     border-radius: 25px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -20,18 +31,47 @@
 .header {
     grid-area: header;
     /* Asignamos el área "header" a este elemento */
-    background-color: lightblue;
+    background-color: lightgrey;
     border-radius: 10px 10px 0 0;
     border: 1px solid black;
     text-align: center;
+    padding: 2rem;
 }
+
 
 .content {
     grid-area: content;
     /* Asignamos el área "content" a este elemento */
     border-right: 1px solid black;
     border-left: 1px solid black;
-    background-color: lightyellow;
+    background-color: white;
+}
+
+td p {
+
+    background-color: blue;
+    color: white;
+    padding: .5rem;
+    border-radius: 5px;
+    margin: 2%;
+
+}
+
+.mujer {
+
+    background-color: pink;
+    color: white;
+    border-radius: 5px;
+    margin: 2%;
+
+}
+
+.activT {
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    margin: 2%;
+
 }
 
 .footer {
@@ -41,6 +81,7 @@
     border-radius: 0 0 10px 10px;
     border: 1px solid black;
     text-align: center;
+    padding: 1rem;
 
 }
 
@@ -62,6 +103,7 @@
     /* Añadimos un scroll si el contenido del modal es muy largo */
     background-color: rgba(0, 0, 0, 0.4);
     /* Añadimos un fondo semi-transparente */
+    padding: 2rem;
 }
 
 /* Estilos para el contenido del login modal */
@@ -76,43 +118,77 @@
     /* Establecemos el ancho del contenido del modal a un 50% del ancho total */
     box-sizing: border-box;
     /* Hacemos que el contenido del modal ajuste su tamaño al del contenedor */
+    text-align: center;
+
 }
 
 /* Estilos para la capa de fondo semi-transparente */
 .modal-overlay {
     display: none;
-    /* Ocultamos la capa de fondo por defecto */
     position: fixed;
-    /* Fijamos la posición de la capa de fondo */
     z-index: 1;
-    /* Colocamos la capa de fondo encima de todos los demás elementos */
     left: 0;
     top: 0;
     width: 100%;
-    /* Hacemos que la capa de fondo ocupe todo el ancho de la pantalla */
     height: 100%;
-    /* Hacemos que la capa de fondo ocupe toda la altura de la pantalla */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Añadimos un fondo semi-transparente */
 }
 
 /* Estilos para el botón que abre el login modal */
-.open-modal-btn {
+
+.boton {
+    background-color: green;
+    color: white;
+    margin-bottom: 2%;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
-    /* Convertimos el botón en un enlace clicable */
+}
+
+.open-modal-btn {
+    margin-left: 50%;
+    cursor: pointer;
+    align-items: center;
+    background-color: green;
+    color: #fefefe;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /* Estilos para el botón que cierra el login modal */
 .close-modal-btn {
-    color: #aaa;
+    border-radius: 10px;
+    background-color: darkgray;
+    color: white;
     float: right;
-    font-size: 28px;
     font-weight: bold;
+    border: none;
+    padding: .6rem;
+}
+
+#footer-form {
+    border: 1px solid black;
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+
+.add-new-btn {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    float: left;
+    font-weight: bold;
+    padding: .6rem;
+    cursor: pointer;
 }
 
 .close-modal-btn:hover,
 .close-modal-btn:focus {
-    color: black;
+    color: red;
     text-decoration: none;
     cursor: pointer;
 }
@@ -120,34 +196,35 @@
 table {
     background-color: white;
     border-collapse: collapse;
-    margin: auto;
+    margin: 2rem;
     min-width: auto;
     text-align: center;
     height: auto;
     border: 1px solid rgb(255, 187, 0);
-  }
-  
-  table thead {
-    border-radius: 25px 0 0 0;}
+}
 
-  table thead th {
+table thead {
+    border-radius: 25px 0 0 0;
+}
+
+table thead th {
     background-color: rgb(255, 187, 0);
     color: black;
-  }
-  
-  table td,
-  table th {
+}
+
+table td,
+table th {
     padding: 1rem 2rem;
     border: 1px solid rgb(255, 187, 0);
-  }
-  
-  table tr:hover td {
+}
+
+table tr:hover td {
     background-color: rgb(255, 187, 0);
     color: black;
-  }
-  
-  
-  table tr {
+}
+
+
+table tr {
     text-align: center;
     color: black;
-  }
+}

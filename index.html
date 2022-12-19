@@ -1,91 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/style.css">
+
+
     <!-- Completa tu nombre -->
     <title>Manuel Recio Claros</title>
 
     <style src="static/style.css"></style>
 </head>
+
 <body>
     <div class="grid">
-        <!-- Contenido de la página, distribuido en distintas áreas de la rejilla -->
         <header class="header">
-            <!-- Añadimos un botón para abrir el login modal -->
             Aplicación de dietas
         </header>
 
-        <main class="content">Contenido principal
-            <br>
+        <main class="content">
             <div>
                 <table id="tabla">
                     <thead>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Sexo</th>
-                        <th>Edad</th>
-                        <th>Altura</th>
-                        <th>Peso</th>
-                        <th>Actividad</th>
-                        <th>IM Basal</th>
-                        <th>Calorias necesarias</th>
-                      </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Sexo</th>
+                            <th>Edad</th>
+                            <th>Altura</th>
+                            <th>Peso</th>
+                            <th>Actividad</th>
+                            <th>IM Basal</th>
+                            <th>Calorias necesarias</th>
+                        </tr>
                     </thead>
                     <tr>
-                      <td>Francisco Romero</td>
-                      <td>Hombre</td>
-                      <td>31</td>
-                      <td>198</td>
-                      <td>89</td>
-                      <td>moderada</td>
-                      <td>1427 kCal</td>
-                      <td>1713 kCal</td>
+                        <td>Francisco Romero</td>
+                        <td>
+                            <p>Hombre</p>
+                        </td>
+                        <td>31</td>
+                        <td>198</td>
+                        <td>89</td>
+                        <td>
+                            <p class="activT">moderada</p>
+                        </td>
+                        <td>1427 kCal</td>
+                        <td>1713 kCal</td>
                     </tr>
                     <tr>
                         <td>Jose Antonio Lara</td>
-                        <td>Hombre</td>
+                        <td>
+                            <p>Hombre</p>
+                        </td>
                         <td>46</td>
                         <td>187</td>
                         <td>85</td>
-                        <td>moderada</td>
+                        <td>
+                            <p class="activT">moderada</p>
+                        </td>
                         <td>1333 kCal</td>
                         <td>1435 kCal</td>
-                      </tr>
-                      <tr id="ultima">
+                    </tr>
+                    <tr>
                         <td>Jeniffer Lopez</td>
-                        <td>Mujer</td>
+                        <td>
+                            <p class="mujer">Mujer</p>
+                        </td>
                         <td>45</td>
                         <td>167</td>
                         <td>56</td>
-                        <td>alta</td>
+                        <td>
+                            <p class="activT">alta</p>
+                        </td>
                         <td>1256 kCal</td>
                         <td>1943 kCal</td>
-                      </tr>
+                    </tr>
+                    <tr>
+                        <td>Alicia Indies</td>
+                        <td>
+                            <p class="mujer">Mujer</p>
+                        </td>
+                        <td>19</td>
+                        <td>160</td>
+                        <td>56</td>
+                        <td>
+                            <p class="activT">moderada</p>
+                        </td>
+                        <td>1256 kCal</td>
+                        <td>1943 kCal</td>
+                    </tr>
+                    <tr>
+                        <td>Miguel Sánchez</td>
+                        <td>
+                            <p>Hombre</p>
+                        </td>
+                        <td>26</td>
+                        <td>175</td>
+                        <td>56</td>
+                        <td>
+                            <p class="activT">alta</p>
+                        </td>
+                        <td>1256 kCal</td>
+                        <td>1943 kCal</td>
+                    </tr>
                 </table>
             </div>
-            
 
-            <span class="open-modal-btn" onclick="openModal()">Iniciar sesión</span>
+
+            <span class="open-modal-btn" onclick="openModal()"><button class="boton">Añadir cliente</button></span>
         </main>
 
-        <footer class="footer">Manuel Recio Claros</footer>
+        <footer class="footer">Manuel Recio Claros&copy; 2022</footer>
     </div>
 
     <!-- Login modal -->
     <div id="login-modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal-btn" onclick="closeModal()">&times;</span>
+
             <!-- Añadimos un botón para cerrar el login modal -->
-            <h2>Iniciar sesión</h2>
-            <form>
-                <label for="username">Nombre de usuario:</label><br>
-                <input type="text" id="username" name="username"><br>
-                <label for="password">Contraseña:</label><br>
-                <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Iniciar sesión">
+            <h2>Nuevo cliente</h2>
+            <form action="get">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"required><br>
+                <label for="username">Sexo:</label>
+                <label><input type="radio" name="shombre" value="hombre" required> Hombre</label>
+                <label><input type="radio" name="smujer" value="mujer"required> Mujer</label><br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"required><br>
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura"required><br>
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso"required><br>
+                <label for="actividad">Actividad física (kg):</label>
+                <select name="actividad" id="actividad"required>
+                    <option value="suav">Suave o sedentaria</option>
+                    <option value="mod">Moderada</option>
+                    <option value="alta">Alta</option>
+                </select>
+                <!--footer-->
+                <footer id="footer-form">
+                    <input type="submit" class="add-new-btn" value="Añadir Nuevo">
+                    <input type="submit" class="close-modal-btn" onclick="closeModal()" value="Volver atrás">
+                </footer>
             </form>
         </div>
     </div>
@@ -94,4 +152,5 @@
     <script src="static/app.js"></script>
 
 </body>
+
 </html>
