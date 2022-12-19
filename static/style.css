@@ -1,0 +1,153 @@
+/*# sourceMappingURL=style.css.map */
+
+/* Definimos el estilo de la rejilla */
+/* Definimos el estilo de la rejilla */
+.grid {
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* Tres columnas con una fracción de ancho cada una */
+    grid-template-rows: auto auto auto;
+    /* Tres filas con 80px, 1fr y 40px de alto respectivamente */
+    grid-template-areas:
+        "header header header"
+        "content content content"
+        "footer footer footer";
+    /* Asignamos áreas a las celdas de la rejilla */
+}
+
+/* Estilos para cada área de la rejilla */
+.header {
+    grid-area: header;
+    /* Asignamos el área "header" a este elemento */
+    background-color: lightblue;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.content {
+    grid-area: content;
+    /* Asignamos el área "content" a este elemento */
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    background-color: lightyellow;
+}
+
+.footer {
+    grid-area: footer;
+    /* Asignamos el área "footer" a este elemento */
+    background-color: lightgray;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+/* Estilos para el login modal */
+.modal {
+    display: none;
+    /* Ocultamos el modal por defecto */
+    position: fixed;
+    /* Fijamos la posición del modal */
+    z-index: 1;
+    /* Colocamos el modal encima de todos los demás elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Hacemos que el modal ocupe todo el ancho de la pantalla */
+    height: 100%;
+    /* Hacemos que el modal ocupe toda la altura de la pantalla */
+    overflow: auto;
+    /* Añadimos un scroll si el contenido del modal es muy largo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Añadimos un fondo semi-transparente */
+}
+
+/* Estilos para el contenido del login modal */
+.modal-content {
+    text-align: center;
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* Centramos el contenido del modal en el centro de la pantalla */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+    /* Establecemos el ancho del contenido del modal a un 50% del ancho total */
+    box-sizing: border-box;
+    /* Hacemos que el contenido del modal ajuste su tamaño al del contenedor */
+}
+
+/* Estilos para la capa de fondo semi-transparente */
+.modal-overlay {
+    display: none;
+    /* Ocultamos la capa de fondo por defecto */
+    position: fixed;
+    /* Fijamos la posición de la capa de fondo */
+    z-index: 1;
+    /* Colocamos la capa de fondo encima de todos los demás elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Hacemos que la capa de fondo ocupe todo el ancho de la pantalla */
+    height: 100%;
+    /* Hacemos que la capa de fondo ocupe toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Añadimos un fondo semi-transparente */
+}
+
+/* Estilos para el botón que abre el login modal */
+.open-modal-btn {
+    cursor: pointer;
+    /* Convertimos el botón en un enlace clicable */
+}
+
+/* Estilos para el botón que cierra el login modal */
+.close-modal-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    margin: auto;
+    min-width: auto;
+    text-align: center;
+    height: auto;
+    border: 1px solid rgb(255, 187, 0);
+  }
+  
+  table thead {
+    border-radius: 25px 0 0 0;}
+
+  table thead th {
+    background-color: rgb(255, 187, 0);
+    color: black;
+  }
+  
+  table td,
+  table th {
+    padding: 1rem 2rem;
+    border: 1px solid rgb(255, 187, 0);
+  }
+  
+  table tr:hover td {
+    background-color: rgb(255, 187, 0);
+    color: black;
+  }
+  
+  
+  table tr {
+    text-align: center;
+    color: black;
+  }

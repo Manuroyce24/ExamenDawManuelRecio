@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style.css">
+    <!-- Completa tu nombre -->
+    <title>Manuel Recio Claros</title>
+
+    <style src="static/style.css"></style>
+</head>
+<body>
+    <div class="grid">
+        <!-- Contenido de la página, distribuido en distintas áreas de la rejilla -->
+        <header class="header">
+            <!-- Añadimos un botón para abrir el login modal -->
+            Aplicación de dietas
+        </header>
+
+        <main class="content">Contenido principal
+            <br>
+            <div>
+                <table id="tabla">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
+                        <th>Altura</th>
+                        <th>Peso</th>
+                        <th>Actividad</th>
+                        <th>IM Basal</th>
+                        <th>Calorias necesarias</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td>Francisco Romero</td>
+                      <td>Hombre</td>
+                      <td>31</td>
+                      <td>198</td>
+                      <td>89</td>
+                      <td>moderada</td>
+                      <td>1427 kCal</td>
+                      <td>1713 kCal</td>
+                    </tr>
+                    <tr>
+                        <td>Jose Antonio Lara</td>
+                        <td>Hombre</td>
+                        <td>46</td>
+                        <td>187</td>
+                        <td>85</td>
+                        <td>moderada</td>
+                        <td>1333 kCal</td>
+                        <td>1435 kCal</td>
+                      </tr>
+                      <tr id="ultima">
+                        <td>Jeniffer Lopez</td>
+                        <td>Mujer</td>
+                        <td>45</td>
+                        <td>167</td>
+                        <td>56</td>
+                        <td>alta</td>
+                        <td>1256 kCal</td>
+                        <td>1943 kCal</td>
+                      </tr>
+                </table>
+            </div>
+            
+
+            <span class="open-modal-btn" onclick="openModal()">Iniciar sesión</span>
+        </main>
+
+        <footer class="footer">Manuel Recio Claros</footer>
+    </div>
+
+    <!-- Login modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn" onclick="closeModal()">&times;</span>
+            <!-- Añadimos un botón para cerrar el login modal -->
+            <h2>Iniciar sesión</h2>
+            <form>
+                <label for="username">Nombre de usuario:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Iniciar sesión">
+            </form>
+        </div>
+    </div>
+    <!-- Completar html aqui -->
+
+    <script src="static/app.js"></script>
+
+</body>
+</html>
