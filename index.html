@@ -115,12 +115,12 @@
         <footer class="footer">Manuel Recio Claros&copy; 2022</footer>
     </div>
 
-    <!-- Login modal -->
+
     <div id="login-modal" class="modal">
         <div class="modal-content">
 
-            <!-- Añadimos un botón para cerrar el login modal -->
-            <h2>Nuevo cliente</h2>
+             <header class="header-form"><h2>Nuevo cliente</h2></header>
+            <div class="content-form">
             <form action="get">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre"required><br>
@@ -139,7 +139,7 @@
                     <option value="mod">Moderada</option>
                     <option value="alta">Alta</option>
                 </select>
-                <!--footer-->
+            </div>
                 <footer id="footer-form">
                     <input type="submit" class="add-new-btn" value="Añadir Nuevo">
                     <input type="submit" class="close-modal-btn" onclick="closeModal()" value="Volver atrás">
@@ -147,7 +147,6 @@
             </form>
         </div>
     </div>
-    <!-- Completar html aqui -->
 
     <script src="static/app.js"></script>
 

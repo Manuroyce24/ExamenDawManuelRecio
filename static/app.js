@@ -6,8 +6,11 @@ function openModal() {
     document.getElementById("modal-overlay").style.display = "block";
 }
 
-// Cerrar login modal
 function closeModal() {
     document.getElementById("login-modal").style.display = "none";
     document.getElementById("modal-overlay").style.display = "none";
 }
+
+
+
+

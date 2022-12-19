@@ -1,33 +1,31 @@
 /*# sourceMappingURL=style.css.map */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-/* Definimos el estilo de la rejilla */
-/* Definimos el estilo de la rejilla */
-
 body {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
 }
 
 .grid {
+
     font-family: 'Fredoka One', cursive;
-    margin: 5%;
-    align-items: center;
-    justify-content: center;
     border-radius: 25px;
     display: grid;
     grid-template-columns: auto auto auto;
-    /* Tres columnas con una fracción de ancho cada una */
     grid-template-rows: auto auto auto;
-    /* Tres filas con 80px, 1fr y 40px de alto respectivamente */
     grid-template-areas:
         "header header header"
         "content content content"
         "footer footer footer";
-    /* Asignamos áreas a las celdas de la rejilla */
-}
 
-/* Estilos para cada área de la rejilla */
+}
 .header {
     grid-area: header;
     /* Asignamos el área "header" a este elemento */
@@ -85,44 +83,39 @@ td p {
 
 }
 
-/* Estilos para el login modal */
-.modal {
+#login-modal {
     display: none;
-    /* Ocultamos el modal por defecto */
     position: fixed;
-    /* Fijamos la posición del modal */
     z-index: 1;
-    /* Colocamos el modal encima de todos los demás elementos */
     left: 0;
     top: 0;
     width: 100%;
-    /* Hacemos que el modal ocupe todo el ancho de la pantalla */
     height: 100%;
-    /* Hacemos que el modal ocupe toda la altura de la pantalla */
     overflow: auto;
-    /* Añadimos un scroll si el contenido del modal es muy largo */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Añadimos un fondo semi-transparente */
     padding: 2rem;
 }
 
-/* Estilos para el contenido del login modal */
 .modal-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: grid;
     text-align: center;
     background-color: #fefefe;
     margin: 10% auto;
-    /* Centramos el contenido del modal en el centro de la pantalla */
     padding: 20px;
     border: 1px solid #888;
     width: 20%;
-    /* Establecemos el ancho del contenido del modal a un 50% del ancho total */
     box-sizing: border-box;
-    /* Hacemos que el contenido del modal ajuste su tamaño al del contenedor */
     text-align: center;
+    border-radius: 10px;
+    
 
 }
 
-/* Estilos para la capa de fondo semi-transparente */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -134,7 +127,6 @@ td p {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Estilos para el botón que abre el login modal */
 
 .boton {
     background-color: green;
@@ -148,7 +140,7 @@ td p {
 }
 
 .open-modal-btn {
-    margin-left: 50%;
+    margin-left: 49%;
     cursor: pointer;
     align-items: center;
     background-color: green;
@@ -158,7 +150,6 @@ td p {
 
 }
 
-/* Estilos para el botón que cierra el login modal */
 .close-modal-btn {
     border-radius: 10px;
     background-color: darkgray;
@@ -167,13 +158,10 @@ td p {
     font-weight: bold;
     border: none;
     padding: .6rem;
+    cursor: pointer;
 }
 
-#footer-form {
-    border: 1px solid black;
-    margin: 1rem;
-    margin-bottom: 3rem;
-}
+
 
 .add-new-btn {
     border: 1px solid black;
@@ -186,12 +174,17 @@ td p {
     cursor: pointer;
 }
 
-.close-modal-btn:hover,
-.close-modal-btn:focus {
-    color: red;
-    text-decoration: none;
-    cursor: pointer;
+.header-form{
+    background-color: grey;
+    margin-bottom: ;
 }
+
+#footer-form {
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+
+
 
 table {
     background-color: white;
@@ -227,4 +220,11 @@ table tr:hover td {
 table tr {
     text-align: center;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+
+
